@@ -8,7 +8,7 @@
     <div class="container py-4">
         <h2><b>Listado de Clientes</b></h2>
 
-        <a href="{{ url('clientes/create') }}" class="btn btn-primary btn-sm mt-2">Ingresar Cliente</a>
+        <a href="{{ url('clientes/create') }}" class="btn btn-primary btn-sm mt-2">Agregar Cliente</a>
     
         <!-- Vista de los clientes -->
         <table class="table table-hover mt-2">
@@ -48,7 +48,10 @@
                 @endforeach
             </tbody>
         </table>
-    
+        
+        <div class="card-body">
+            {{ $clientes->links() }}
+        </div>
     </div>
 </main>
 
